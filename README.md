@@ -13,12 +13,12 @@ In [src/](src):<br>
   - plot of steady state output temperature $\beta_v^\infty$ for AND gate as a function of $\beta_1,\beta_2$;
   - plot of steady state output temperature $\beta_v^\infty$ for OR gate as a function of $\beta_1,\beta_2$.
 
-* [cat_bird_classifier](cat_bird_classifier.py) <br>
+* [cat_bird_classifier](src/cat_bird_classifier.py) <br>
 used as as an example use of Tsetlin machine algorithm (classical or thermodynamic) for classification of inputs (either cat or bird). Plots final memory states for cat rule and prints explicit logical rule for cat and bird.
 
-* [data_classifier](data_classifier.py) <br>
+* [data_classifier](src/data_classifier.py) <br>
 used to test classical/thermodynamic classifier, returns training and testing accuracy. Can store results in a csv.
-* [analysis](analysis.py)<br>
+* [analysis](src/analysis.py)<br>
 used to produce performance tables for [individual datasets](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L184), [condensed summary](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L183) table of testing classical and thermodynamic ($N=3$) accuracy for each dataset.
 
   
