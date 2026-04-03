@@ -49,7 +49,7 @@ def compile_results(dataset, accuracy_column, accuracy_type):
     (choose from: 'Avg Testing Accuracy', 'Avg Training Accuracy')
     accuracy_type: either 'testing' or 'training'
    """
-    df = pd.read_csv(f"results/{dataset}_performance.csv")
+    df = pd.read_csv(f"{dataset}_performance.csv")
     values = (df.groupby('Method')[f'{accuracy_column}']
               .agg(["mean", "std"])
               .stack(level=0).to_frame().T)
@@ -133,7 +133,7 @@ def print_performance_tables():
     print performance averages/errors for each dataset.
     """
     datasets = ['breast_cancer', 'income', 'mushroom', 'spam', 'tictactoe']
-    df = pd.read_csv('results/summary.csv')
+    df = pd.read_csv('summary.csv')
     for dataset_choice in datasets:
         print(f'Dataset: {dataset_choice}')
         generate_table(dataset_choice, df)
@@ -144,7 +144,7 @@ def complete_summary_table():
     Classical/Thermal (N=3)
     """
     datasets = ['breast_cancer', 'income', 'mushroom', 'spam', 'tictactoe']
-    df = pd.read_csv('results/summary.csv')
+    df = pd.read_csv('summary.csv')
     
     summary_table = []
     for dataset_choice in datasets:
@@ -174,11 +174,11 @@ def complete_summary_table():
 # loop through all dataset to compile performance averages to summary.csv
 datasets = ['tictactoe', 'breast_cancer', 'income', 'mushroom',
             'spam'] 
-for dataset in datasets:
-    compile_results(dataset, 'Avg Testing Accuracy', 'testing')
-    compile_results(dataset, 'Avg Training Accuracy', 'training')        
+# for dataset in datasets:
+  #   compile_results(dataset, 'Avg Testing Accuracy', 'testing')
+    # compile_results(dataset, 'Avg Training Accuracy', 'training')        
 
 # now, produce a summary table for each dataset and a condensed summary
 # with just testing accuracy for classical and thermodynamic(N=3)
-complete_summary_table() 
-print_performance_tables()     
+# complete_summary_table() 
+# print_performance_tables()     
