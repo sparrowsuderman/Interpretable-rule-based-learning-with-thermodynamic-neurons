@@ -1,7 +1,7 @@
 # Interpretable-rule-based-learning-with-thermodynamic-neurons
 This contains the code to reproduce the results of my MSci thesis titled 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'
 
-[Tsetlin_machine_framework](src/Tsetlin_machine_framework.py) - uses Memory class to keep record of and update memory states during learning in order to produce a rule. Use [this]([Tsetlin_machine_framework](src/Tsetlin_machine_framework.py#L29) function.
+[Tsetlin_machine_framework](src/Tsetlin_machine_framework.py) - uses Memory class to keep record of and update memory states during learning in order to produce a rule. Use [this]([Tsetlin_machine_framework](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/b264d8364b1e815cb4a3d78410edc2f41780383b/src/Tsetlin_machine_framework.py#L29) function.
 analysis - used to produce data summary tables shown in results/appendix, ind averages and standard deviations for each dataset and training/testing and compile into summary.csv
 - now we want to produce a summary table for each dataset and a summary for the whole thing where we restrict to testing accuracy for classical and thermodynamic N=3
 binarizer - used to booleanize continuous features in dataset
