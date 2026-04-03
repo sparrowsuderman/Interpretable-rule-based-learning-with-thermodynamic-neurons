@@ -63,4 +63,4 @@ data_summary = [['Dataset', 'Accuracy',
         'Thermo (N=10) mean', 'Thermo (N=10) std']]
 
 # create empty csv to save performance average for all the datasets
-# save_as_csv('results/summary.csv', data_summary)
+# save_as_csv('summary.csv', data_summary)
