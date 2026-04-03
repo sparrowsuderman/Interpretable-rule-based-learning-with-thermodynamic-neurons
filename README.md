@@ -1,5 +1,11 @@
 # Interpretable-rule-based-learning-with-thermodynamic-neurons
-This contains the code to reproduce the results of my MSci thesis titled 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'
+This contains the code to reproduce the results of 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'
+In [src](src):<br>
+* [network_with_signal](network_with_signal.py) <br>
+This code includes: simulated NOT, AND, OR gates
+
+In [results](results): <br>
+data collected which leads to the tables of classification accuracy for different datasets ([breast cancer](results/breast_cancer_performance.csv), [mushroom](results/mushroom_performance.csv), [tic-tac-toe](results/tictactoe_performance.csv), [income](results/income_performance.csv), [spam](results/spam_performance.csv)) as well as a condensed summary of [average performance](results/summary.csv), which appear in the results and appendix.
 
 * [Tsetlin_machine_framework](src/Tsetlin_machine_framework.py) - uses Memory class to keep record of and update memory states during learning in order to produce a rule. Use [this](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/b264d8364b1e815cb4a3d78410edc2f41780383b/src/Tsetlin_machine_framework.py#L29) function.
 
