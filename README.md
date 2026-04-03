@@ -18,7 +18,7 @@ used as as an example use of Tsetlin machine algorithm (classical or thermodynam
 
 * [data_classifier](data_classifier.py) <br>
 used to test classical/thermodynamic classifier, returns training and testing accuracy. Can store results in a csv.
-*[analysis](analysis.py)<br>
+* [analysis](analysis.py)<br>
 used to produce performance tables for [individual datasets](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L184), [condensed summary](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L183) table of testing classical and thermodynamic ($N=3$) accuracy for each dataset
 
   
