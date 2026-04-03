@@ -1,6 +1,6 @@
 # Interpretable-rule-based-learning-with-thermodynamic-neurons
 This contains the code to reproduce the results of 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'<br>
-In [src](src):<br>
+In [src/](src):<br>
 * [network_with_signal](network_with_signal.ipynb) includes: <br>
   - simulated NOT, AND, OR gates
   - plot of excited population of signal qubit coupled to a NOT gate as a function of thermalisation time (T)
@@ -22,5 +22,5 @@ used to test classical/thermodynamic classifier, returns training and testing ac
 used to produce performance tables for [individual datasets](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L184), [condensed summary](https://github.com/sparrowsuderman/Interpretable-rule-based-learning-with-thermodynamic-neurons/blob/5cc6e40a11e724332872d5766309db87b054acaf/src/analysis.py#L183) table of testing classical and thermodynamic ($N=3$) accuracy for each dataset
 
   
-In [results](results): <br>
+In [results/](results): <br>
 data collected which leads to the tables of classification accuracy for different datasets ([breast cancer](results/breast_cancer_performance.csv), [mushroom](results/mushroom_performance.csv), [tic-tac-toe](results/tictactoe_performance.csv), [income](results/income_performance.csv), [spam](results/spam_performance.csv)) as well as a condensed summary of [average performance](results/summary.csv), which appear in the results and appendix.
