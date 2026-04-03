@@ -3,7 +3,8 @@ Central classifier. For choice of dataset, method and redundancy (for thermal ca
 can evaluate accuracy of classifier (on Training and Unseen data)
 """
 from Tsetlin_machine_framework import Memory, train_machine, classify
-from analysis_data_handling import prep_data, log_results
+from data_prep import prep_data
+from store_results import log_results
 from tqdm import tqdm
 
 
