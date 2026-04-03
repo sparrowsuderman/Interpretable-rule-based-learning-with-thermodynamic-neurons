@@ -1,5 +1,5 @@
 # Interpretable-rule-based-learning-with-thermodynamic-neurons
-This contains the code to reproduce the results of 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'
+This contains the code to reproduce the results of 'Interpretable Rule-Based Learning with Thermodynamic Neurons.'<br>
 In [src](src):<br>
 * [network_with_signal](network_with_signal.ipynb) includes: <br>
   - simulated NOT, AND, OR gates
