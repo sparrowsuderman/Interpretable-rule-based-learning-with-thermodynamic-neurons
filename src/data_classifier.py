@@ -3,10 +3,10 @@ Central classifier. For choice of dataset, method and redundancy (for thermal ca
 can evaluate accuracy of classifier (on Training and Unseen data)
 """
 from Tsetlin_machine_framework import Memory, train_machine, classify
-from data_prep import prep_data
+from data_prep import prep_data, fetch_data 
 from store_results import log_results
 from tqdm import tqdm
-
+import time
 
 def test_classifier(dataset, method, N):
     """
@@ -20,8 +20,8 @@ def test_classifier(dataset, method, N):
     -------
     accuracy_test, accuracy_train: [num] classification accuracy
     """
-    
-    X_train, X_test, Y_train, Y_test, Y_train_flip, dim_memory = prep_data(dataset)
+    X, y, bits_per_feature = fetch_data(dataset)
+    X_train, X_test, Y_train, Y_test, Y_train_flip, dim_memory = prep_data(dataset, X, y, bits_per_feature)
     conditions = []
     not_conditions = []
     num_rules = 10
@@ -48,15 +48,16 @@ def test_classifier(dataset, method, N):
         if output == Y_train[i]:
             correct_train+=1
     accuracy_train = correct_train*100/len(X_train)
-        
+    
+    csv_path = f'results/{dataset}_performance.csv'
     results_dict ={'Dataset': dataset,
                     'Method': (method, 'N=',N),
                     'Avg Training Accuracy': accuracy_train, 
-                    'Avg. Testing Accuracy': accuracy_test, 
+                    'Avg Testing Accuracy': accuracy_test, 
                     'Training/Test': '80/20', 
                     'Rules': num_rules,
                     'Training loops': training_loops} 
-    # log_results(csv_path, results_dict)
+    log_results(csv_path, results_dict)
     print("Train Accuracy: ", accuracy_train)
     print("Test Accuracy: ", accuracy_test)
     return accuracy_test, accuracy_train
@@ -67,6 +68,11 @@ dataset: 'mushroom', 'breast_cancer', 'spam', 'tictactoe', 'income'
 method: 'Classical', 'Therm'
 N: (corresponds to redundancy for thermodynamic classifier)
 """
+datasets = ['mushroom', 'breast_cancer', 'spam', 'tictactoe', 'income']
+for dataset in datasets:
+    method = 'Therm'
+    for i in range(10):
+        test_classifier(dataset, method, 5)
+        time.sleep(3)
 
-test_classifier('spam', 'Classical', 0)
 

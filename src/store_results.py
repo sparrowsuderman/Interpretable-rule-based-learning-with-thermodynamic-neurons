@@ -31,8 +31,7 @@ def save_as_csv(csv_file_path, data):
 """
 If want to create an empty csv for:
     
-- 
-data = [['Dataset', 'Accuracy',
+- data = [['Dataset', 'Accuracy',
           'Classical mean', 'Classical std',
         'Thermo (N=1) mean', 'Thermo (N=1) std',
         'Thermo (N=2) mean', 'Thermo (N=2) std',
@@ -49,18 +48,3 @@ data = [['Dataset','Method','Avg Training Accuracy', 'Avg Testing Accuracy', 'Tr
 - summarise performance for specific redundancy to compare thermo. to class.
 data = [['Dataset', 'Classical Accuracy', 'Thermodynamic Accuracy']]
 """
-data_summary = [['Dataset', 'Accuracy',
-          'Classical mean', 'Classical std',
-        'Thermo (N=1) mean', 'Thermo (N=1) std',
-        'Thermo (N=2) mean', 'Thermo (N=2) std',
-        'Thermo (N=3) mean', 'Thermo (N=3) std',
-        'Thermo (N=4) mean', 'Thermo (N=4) std',
-        'Thermo (N=5) mean', 'Thermo (N=5) std',
-        'Thermo (N=6) mean', 'Thermo (N=6) std',
-        'Thermo (N=7) mean', 'Thermo (N=7) std',
-        'Thermo (N=8) mean', 'Thermo (N=8) std',
-        'Thermo (N=9) mean', 'Thermo (N=9) std',
-        'Thermo (N=10) mean', 'Thermo (N=10) std']]
-
-# create empty csv to save performance average for all the datasets
-# save_as_csv('summary.csv', data_summary)

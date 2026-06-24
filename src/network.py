@@ -25,23 +25,19 @@ def single_feature_network(x,c1,c2, N):
     c2 : [0,1] False literal
     N : [integer] gate redundancy (number of duplicates)
     -------
-    outputC : [0,1] returns 1 if c1=1 and x=1 or c2=1 and x=0, otherwise 0.
+    outputC : [0,1] returns 1 if c1=1, x=1 or c2=1 and x=0 or x,c1,c3 = 0, otherwise 0.
     """
-    NOTx = NOT(x, N)
+    NOTx = NOT(x,N)
     NOTc1 = NOT(c1, N)
     NOTc2 = NOT(c2, N)
     
-    outputA1 = AND(NOTx, NOTc1, N)
-    outputA2 = AND(x, c1, N)
+    outputA1 = OR(NOTc1, x, N)
+    outputA2 = OR(NOTc2, NOTx, N)
     
-    outputB1 = OR(outputA1, outputA2, N)
-    outputB2 = AND(x, NOTc2, N)
+    output = AND(outputA1, outputA2, N)
     
-    outputC = OR(outputB1, outputB2, N)
+    return output
 
-    return outputC
-
-        
-    
+ 
    
 
